@@ -30,7 +30,7 @@
           update_cache: latest
       
       - name: create a foler 
-        command: mkdir /home/ola && touch kunle
+        command: mkdir /home/ola
 
       - name: run a shell script
         script: ./olakunle.sh
