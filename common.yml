@@ -29,7 +29,7 @@
         apt: 
           update_cache: latest
       
-      - name: create a folder akin
+      - name: create a folder 
         command: mkdir /home/ola && touch kunle
 
       - name: run a shell script
