@@ -1,0 +1,40 @@
+---
+  - name: update the (RH)servers
+    hosts: webservers, nfs, db
+    remote_user: ec2-user
+    become: yes
+    become_user: root
+    tasks:
+      - name: install wireshark
+        yum:
+          name: wireshark
+          state: latest
+
+      - name: update the servers
+        yum:
+          update_cache: latest
+
+  - name: update ubuntu based servers
+    hosts: LB
+    remote_user: ubuntu
+    become: yes
+    become_user: root
+    tasks:
+      - name: ensure wireshark is latest
+        apt:
+          name: wireshark
+          state: latest
+          
+      - name: update servers
+        apt: 
+          update_cache: latest
+      
+      - name: create a folder akin
+        command: mkdir /home/ola && touch kunle
+
+      - name: run a shell script
+        script: ./olakunle.sh
+          
+
+
+    
