@@ -29,7 +29,7 @@
         apt: 
           update_cache: latest
       
-      - name: create a foler 
+      - name: cre 
         command: mkdir /home/ola
 
       - name: run a shell script
