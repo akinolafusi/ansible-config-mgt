@@ -33,7 +33,7 @@
         command: mkdir /home/ola
 
       - name: run a shell script
-        script: ./naira
+        script: ./nairamarley
           
 
 
