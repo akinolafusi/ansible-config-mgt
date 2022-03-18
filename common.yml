@@ -22,6 +22,11 @@
       apt:
         update_cache: yes
 
+    - name: install wireshark
+      apt:
+        name: wireshark
+        state: present
+
     - name: create directory
       file:
         path: /home/ola
