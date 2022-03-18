@@ -13,3 +13,18 @@
       yum:
         update_cache: yes
 
+- name: update lb
+  hosts: lb
+  become: true
+  become_user: root
+  tasks:
+    - name: update lb
+      apt:
+        update_cache: yes
+
+    - name: create directory
+      file:
+        path: /home/ola
+        state: directory
+        mode: 700
+        owner: user
