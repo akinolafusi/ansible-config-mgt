@@ -1,6 +1,6 @@
 ---
 - name: update (RH)
-  hosts: [webserver] [nfs] [db]
+  hosts: webservers, nfs, db
   become: true
   become_user: root
   tasks:
