@@ -1,4 +1,18 @@
 ---
+- name: update (RH)
+  hosts: webservers, nfs, db
+  become: true
+  become_user: root
+  tasks:
+    - name: install wire shark
+      yum:
+        name: wireshark
+        state: present
+    
+    - name: update rh severs
+      yum:
+        update_cache: yes
+
 - name: update new ubuntu servers
   hosts: webservers
   become: true
