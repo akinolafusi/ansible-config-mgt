@@ -1,3 +1,3 @@
 # ansible-config-mgt
-Ansible Project in e
+Ansible Project in earnest
 
