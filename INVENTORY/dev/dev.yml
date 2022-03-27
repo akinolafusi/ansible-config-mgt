@@ -2,8 +2,8 @@
 172.31.90.65 ansible_ssh_user='ec2-user'
 
 [webservers]
-172.31.90.249 ansible_ssh_user='ubuntu'
-172.31.93.218 ansible_ssh_user='ubuntu'
+172.31.90.249 ansible_ssh_user='ubuntu' ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+172.31.93.218 ansible_ssh_user='ubuntu' ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [db]
 172.31.92.17 ansible_ssh_user='ec2-user' 
