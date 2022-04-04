@@ -36,6 +36,11 @@
 ###
 ### backend_listen_port
 #### Define the backend listen port which application is listening on
+
+enable_nginx_lb: false
+
+load_balancer_is_required: false
+
 nginx_load_balancer_configs: []
   # - name: 'google_dns'
   #   frontend_listen_port: 53
