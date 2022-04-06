@@ -1,4 +1,4 @@
 ---
 - hosts: webservers
   roles:
-    - role: /roles/webserver/
+    - role: '/roles/webserver/'
