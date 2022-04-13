@@ -17,7 +17,6 @@ pipeline {
         }
       }
     }
-
     stage("SCM CHECKOUT") {
       steps {
         https://github.com/akinolafusi/ansible-config-mgt.git
