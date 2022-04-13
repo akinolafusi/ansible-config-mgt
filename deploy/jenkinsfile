@@ -2,19 +2,14 @@ pipeline {
   agent any
 
   stages {
-    stage ("SCM CHECKOUT") {
+    stage ("show text") {
       steps {
-        https://github.com/akinolafusi/ansible-config-mgt.git
+        sh "echo ola"
       }
     }
-    stage ("RUN PLAYBOOK") {
+    stage ("say something") {
       steps {
-        ansiblePlaybook become: true, colorized: true, credentialsId: 'ubuntu', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml'
-      }
-    }
-    stage ("clean after build") {
-      steps {
-        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, deleteDirs: true)
+        sh "echo tade"
       }
     }
   }
