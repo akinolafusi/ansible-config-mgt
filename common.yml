@@ -7,8 +7,3 @@
     - name: update new ubuntu servers
       apt:
         update_cache: yes
-
-    - name: install wireshark
-      apt:
-        name: wireshark
-        state: present
