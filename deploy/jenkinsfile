@@ -1,13 +1,17 @@
 pipeline {
-    agent any
+  agent any
 
   stages {
-    stage('Build') {
+    stage("scm checkout") {
       steps {
-        script {
-          sh 'echo "Building Stage"'
-        }
+        git branch: 'main', url: 'https://github.com/akinolafusi/ansible-config-mgt.git'
       }
     }
+
+    stage("run ansible playbook") {
+      steps {
+        
+      }
     }
+  }
 }

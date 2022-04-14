@@ -1,6 +1,7 @@
 ---
-- hosts: webservers
-- name: Webserver assignment
-  ansible.builtin.import_playbook: ../static-assignments/webservers.yml
+
+# - hosts: webservers
+# - name: Webserver assignment
+#   ansible.builtin.import_playbook: ../static-assignments/webservers.yml
 
 
