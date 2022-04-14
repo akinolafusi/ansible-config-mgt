@@ -19,7 +19,7 @@ pipeline {
     }
     stage ("SCM CHECKOUT") {
       steps {
-        git branch: 'main', url: 'https://github.com/akinolafusi/ansible-config-mgt.git'
+        https://github.com/akinolafusi/ansible-config-mgt.git
       }
     }
     stage ("Preapre ansible") {
@@ -40,3 +40,4 @@ pipeline {
     }
   }
 }
+gettttt
