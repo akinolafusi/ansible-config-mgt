@@ -1,16 +1,45 @@
 pipeline {
   agent any
 
+  envirnoment {
+    ANSIBLE_CONFIG="${WORKSPACE}/deploy/ansible.cfg"
+  }
+
+  parameters {
+    string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
+  }
+
   stages {
+    stage("Initial clean up") {
+      steps {
+        dir("${WORKSPACE}") {
+          deleteDir()
+        }
+      }
+    }
+
     stage("scm checkout") {
       steps {
         git branch: 'main', url: 'https://github.com/akinolafusi/ansible-config-mgt.git'
       }
     }
 
+    stage("prepare ansible for execution") {
+      steps {
+        sh 'echo ${WORKSPACE}'
+        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'
+      }
+    }
+
     stage("run ansible playbook") {
       steps {
-        ansiblePlaybook colorized: true, credentialsId: 'c62833e5-7d0f-480d-8ae9-dbf7f69008d5', disableHostKeyChecking: true, installation: 'ansible', inventory: 'INVENTORY/dev.yml', playbook: 'common.yml'
+        ansiblePlaybook colorized: true, credentialsId: 'c62833e5-7d0f-480d-8ae9-dbf7f69008d5', disableHostKeyChecking: true, installation: 'ansible', inventory: 'INVENTORY/dev.yml', playbook: 'Playbooks/site.yml'
+      }
+    }
+
+    stage("clean after build") {
+      steps {
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, deleteDirs: true)
       }
     }
   }

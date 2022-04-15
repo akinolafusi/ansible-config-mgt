@@ -1,5 +1,8 @@
 ---
-
+- hosts: nginx
+- name: "install apache on nginx"
+  ansible.builtin.import_playbook: ../static-assignments/dev.yml
+  
 # - hosts: webservers
 # - name: Webserver assignment
 #   ansible.builtin.import_playbook: ../static-assignments/webservers.yml
