@@ -2,4 +2,4 @@
 - hosts: nginx
   become: true
   roles: 
-    - apache2
+    - nginx_lb
