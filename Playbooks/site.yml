@@ -4,7 +4,7 @@
 
 
 ---
-- hosts: art
+- hosts: artifactory
 - name: "artifactory on artifactory server"
   import_playbook: ../static-assignments/ci.yml
   
