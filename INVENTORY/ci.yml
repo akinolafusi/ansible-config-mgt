@@ -1,5 +1,5 @@
 [artifactory]
-172.31.93.145 ansible_ssh_user="ubuntu"
+172.31.85.20 ansible_ssh_user="ubuntu"
 
 
 [jenkins]
