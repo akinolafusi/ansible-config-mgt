@@ -1,6 +1,14 @@
+# ---
+# - name: "install apache on nginx"
+#   import_playbook: ../static-assignments/dev.yml
+
+
 ---
-- name: "install apache on nginx"
-  import_playbook: ../static-assignments/dev.yml
+- name: "artifactory on artifactory server"
+  import_playbook: ../static-assignments/ci.yml
+  
+
+
   
 # - hosts: webservers
 # - name: Webserver assignment
