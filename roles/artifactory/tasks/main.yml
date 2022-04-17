@@ -63,4 +63,4 @@
   ansible.builtin.service:
     name: artifactory
     state: started
-    enabled: true
+    enabled: yes
