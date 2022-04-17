@@ -1,10 +1,10 @@
-[jenkins]
-172.31.17.102 ansible_ssh_user="ubuntu"
-[nginx]
-<Nginx-Private-IP-Address>
+# [jenkins]
+# 172.31.17.102 ansible_ssh_user="ubuntu"
+# [nginx]
+# <Nginx-Private-IP-Address>
 
-[sonarqube]
-<SonarQube-Private-IP-Address>
+# [sonarqube]
+# <SonarQube-Private-IP-Address>
 
 [artifactory]
-3.83.127.192 ansible_ssh_user="ubuntu"
+172.31.93.145 ansible_ssh_user="ubuntu"
