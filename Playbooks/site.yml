@@ -8,7 +8,7 @@
 # - name: "artifactory on artifactory server"
 #   import_playbook: ../static-assignments/ci.yml
 
-  ---
+---
 - hosts: sonar
 - name: "sonar on sonar server"
   import_playbook: ../static-assignments/ci.yml
