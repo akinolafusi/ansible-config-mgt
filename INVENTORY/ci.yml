@@ -7,5 +7,5 @@
 [nginx]
 <Nginx-Private-IP-Address>
 
-[sonarqube]
-<SonarQube-Private-IP-Address>
+[sonar]
+172.31.31.60 ansible_ssh_user="ubuntu"

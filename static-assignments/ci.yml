@@ -1,5 +1,11 @@
+# ---
+# - hosts: artifactory
+#   become: true
+#   roles: 
+#     - artifactory
+
 ---
-- hosts: artifactory
+- hosts: sonar
   become: true
   roles: 
-    - artifactory
+    - sonar
