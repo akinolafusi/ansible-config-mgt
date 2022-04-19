@@ -24,7 +24,7 @@
      
 
 - name: create password for user postgres
-  ansible.builtin.user:
+  user:
     name: postgres
     group: postgres
     password: postgres
